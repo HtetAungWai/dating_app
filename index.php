@@ -51,7 +51,9 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
       <img src="<?php echo $row['photo']; ?>" class="rounded-circle mx-auto mt-3" style="width: 120px; height: 120px; object-fit: cover;" alt="Profile">
       <div class="card-body">
         <h5 class="card-title"><?php echo $row['name'] . ', ' . $row['age']; ?></h5>
-        <p class="card-text">📍 Distance hidden for now</p>
+        
+      <p class="card-text">📍 <?php echo $row['distance_km']; ?> km away</p>
+         <p class="card-text">"<?php echo $row['bio']; ?>"</p>
         <div class="d-flex justify-content-around mt-3">
           <button class="btn btn-secondary rounded-pill px-4 btn-dislike">👎 Dislike</button>
           <button class="btn btn-danger rounded-pill px-4 btn-like">❤️ Like</button>
